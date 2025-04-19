@@ -1,0 +1,95 @@
+body {
+    font-family: "Verdana", sans-serif;
+    background-color: #f0f7f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.hero {
+    background: url('pets-background.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.cta-btn {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #45a049;
+}
+
+.features,
+.services,
+.contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.feature-cards,
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card,
+.service-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover,
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #45a049;
+}

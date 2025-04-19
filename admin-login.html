@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="icon" type="image/png" href="paw.webp">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+      body {
+          background: linear-gradient(to right, #ff8000, #ffaf40);
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .login-container {
+          background: white;
+          padding: 2rem;
+          border-radius: 12px;
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+          text-align: center;
+          max-width: 400px;
+          width: 100%;
+      }
+      .login-container h2 {
+          color: #ff8000;
+          margin-bottom: 20px;
+      }
+      .form-control {
+          border-radius: 8px;
+          border: 2px solid #ff8000;
+      }
+      .btn-login {
+          background: #ff8000;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          padding: 10px;
+          width: 100%;
+          font-size: 1.1rem;
+          transition: 0.3s;
+      }
+      .btn-login:hover {
+          background: #e66b00;
+      }
+      .error-message {
+          color: red;
+          margin-top: 10px;
+      }
+  </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="bg-light rounded">
+            <div class="row g-0">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="h-100 d-flex flex-column justify-content-center p-5">
+                        <h1 class="mb-3" style="color: #ffaf40;">Admin Login</h1>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div style="margin-top: 5%;margin-bottom: 5%;">
+            <input type="text" id="username" placeholder="Username">
+        </div>
+        <div style="margin-top: 5%;margin-bottom: 5%;">
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        
+        <div style="margin-top: 5%;margin-bottom: 5%;">
+            <button onclick="login()">Login</button>
+            <p class="error" id="error-message"></p>
+        </div>
+        
+    </div>
+
+    <script>
+      function login() {
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+  
+          // Hardcoded admin credentials
+          const adminUsername = "lokkit";
+          const adminPassword = "lokkit";
+  
+          if (username === adminUsername && password === adminPassword) {
+              // Retrieve stored page
+              const redirectPage = sessionStorage.getItem("attemptedPage");
+              
+              if (redirectPage) {
+                  sessionStorage.removeItem("attemptedPage"); // Clear it after use
+                  window.location.href = redirectPage;
+              } else {
+                  window.location.href = "index.html"; // Redirect to home if no page stored
+              }
+          } else {
+              document.getElementById("error-message").innerText = "Invalid Credentials!";
+          }
+      }
+  </script>
+  
+  
+  
+
+</body>
+</html>

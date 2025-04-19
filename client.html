@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ADAMS - Client Data</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="paw.webp">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+            <a href="index.html" class="navbar-brand">
+                <h1 class="m-0 text-primary"><i class="fa fa-paw me-3"></i>ADAMS</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About Us</a>
+                    <a href="classes.html" class="nav-item nav-link">Services</a>
+                    <!-- <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="facility.html" class="dropdown-item">Clinic Facilities</a>
+                            <a href="team.html" class="dropdown-item">Our Veterinarians</a>
+                            <a href="call-to-action.html" class="dropdown-item">Join Our Team</a>
+                            <a href="appointment.html" class="dropdown-item">Make Appointment</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                            <a href="404.html" class="dropdown-item">404 Error</a>
+                        </div>
+                    </div> -->
+                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                </div>
+                <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a>
+            </div>
+        </nav>
+        <section id="client-data" class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Client Data</h1>
+                    <p>Manage client and pet information efficiently.</p>
+                </div>
+                <form id="data-form" class="wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="client-name" class="form-label">Client Name:</label>
+                            <input type="text" class="form-control" id="client-name" name="client-name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="pet-name" class="form-label">Pet Name:</label>
+                            <input type="text" class="form-control" id="pet-name" name="pet-name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="pet-type" class="form-label">Pet Type:</label>
+                            <input type="text" class="form-control" id="pet-type" name="pet-type" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="medical-history" class="form-label">Medical History:</label>
+                            <textarea class="form-control" id="medical-history" name="medical-history" required></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="height" class="form-label">Height (cm):</label>
+                            <input type="number" class="form-control" id="height" name="height" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="weight" class="form-label">Weight (kg):</label>
+                            <input type="number" class="form-control" id="weight" name="weight" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="last-appointment" class="form-label">Last Appointment:</label>
+                            <input type="date" class="form-control" id="last-appointment" name="last-appointment" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="upcoming-appointment" class="form-label">Upcoming Appointment:</label>
+                            <input type="date" class="form-control" id="upcoming-appointment" name="upcoming-appointment" required>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary rounded-pill py-3 px-5">Submit</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="mt-5 wow fadeInUp" data-wow-delay="0.5s">
+                    <h3>Upload Excel Sheet</h3>
+                    <input type="file" id="excel-upload" accept=".xlsx, .xls" class="form-control">
+                    <button onclick="handleExcelUpload()" class="btn btn-secondary rounded-pill mt-3">Upload</button>
+                </div>
+
+                <div class="mt-5 wow fadeInUp" data-wow-delay="0.7s">
+                    <h3>Data Table</h3>
+                    <table id="data-table" class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Client Name</th>
+                                <th>Pet Name</th>
+                                <th>Pet Type</th>
+                                <th>Medical History</th>
+                                <th>Height (cm)</th>
+                                <th>Weight (kg)</th>
+                                <th>Last Appointment</th>
+                                <th>Upcoming Appointment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-5 wow fadeInUp" data-wow-delay="0.9s">
+                    <a href="index.html" onclick="shut()">
+                        <button class="btn btn-primary rounded-pill py-3 px-5">
+                            <i class="fa fa-arrow-left me-2"></i>Go Back
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Get In Touch</h3>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>C-17, main road masoodpur, vasant kunj, new delhi, India</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9116603111</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>lokkit@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Quick Links</h3>
+                        <a class="btn btn-link text-white-50" href="">About Us</a>
+                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Photo Gallery</h3>
+                        <div class="row g-2 pt-2">
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-1.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-2.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-3.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-4.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-5.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/classes-6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Newsletter</h3>
+                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">ADAMS</a>, All Right Reserved. 
+    
+                            Designed By <a class="border-bottom" href="https://htmlcodex.com">Slay</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script>
+         document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("data-form").addEventListener("submit", async function (event) {
+            event.preventDefault();
+            const formData = {
+                clientName: document.getElementById("client-name").value,
+                petName: document.getElementById("pet-name").value,
+                petType: document.getElementById("pet-type").value,
+                medicalHistory: document.getElementById("medical-history").value,
+                height: document.getElementById("height").value,
+                weight: document.getElementById("weight").value,
+                lastAppointment: document.getElementById("last-appointment").value,
+                upcomingAppointment: document.getElementById("upcoming-appointment").value,
+            };
+
+            try {
+                const response = await fetch("http://localhost:3000/add-client", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData)
+                });
+                const data = await response.json();
+                alert(data.message);
+            } catch (error) {
+                console.error("Error submitting form:", error);
+                alert("Failed to submit data. Please try again.");
+            }
+        });
+    });
+
+        function shut() {
+            window.open('index.html', '_self');
+            window.close();
+        }
+
+        function addDataToTable() {
+            const formData = new FormData(document.getElementById("data-form"));
+            const tableBody = document.querySelector("#data-table tbody");
+            const newRow = document.createElement("tr");
+
+            formData.forEach((value) => {
+                const newCell = document.createElement("td");
+                newCell.textContent = value;
+                newRow.appendChild(newCell);
+            });
+
+            tableBody.appendChild(newRow);
+            document.getElementById("data-form").reset();
+        }
+
+        function handleExcelUpload() {
+        const fileInput = document.getElementById("excel-upload");
+        const file = fileInput.files[0];
+
+        if (!file) {
+            alert("Please select a file first.");
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function (event) {
+            const data = new Uint8Array(event.target.result);
+            const workbook = XLSX.read(data, { type: "array" });
+            const sheetName = workbook.SheetNames[0]; // Read first sheet
+            const worksheet = workbook.Sheets[sheetName];
+            const jsonData = XLSX.utils.sheet_to_json(worksheet);
+
+            if (jsonData.length === 0) {
+                alert("The selected file is empty.");
+                return;
+            }
+
+            // Send data to backend
+            fetch("http://localhost:3000/upload-excel", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ clients: jsonData }),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    alert(data.message);
+                })
+                .catch((error) => {
+                    console.error("Error uploading data:", error);
+                    alert("Failed to upload data.");
+                });
+        };
+
+        reader.readAsArrayBuffer(file);
+    }
+    </script>
+</body>
+
+</html>
