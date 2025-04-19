@@ -175,7 +175,7 @@ app.get("/check-alerts", (req, res) => {
 });
 
 // CRON JOB - Daily at 8 AM
-cron.schedule('0 8 * * *', () => {
+cron.schedule('* * * * *', () => {
     console.log("🔁 Running daily alert check at 8:00 AM");
 
     const axios = require('axios');
