@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>ADAMS - About us</title>
+    <title>ADAMS - Admin control</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -43,8 +43,7 @@
         <!-- Spinner End -->
 
 
-         <!-- Navbar Start -->
-         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
             <a href="index.html" class="navbar-brand">
                 <h1 class="m-0 text-primary"><i class="fa fa-paw me-3"></i>ADAMS</h1>
             </a>
@@ -60,17 +59,18 @@
                     <a href="admin-control.html" class="nav-item nav-link">Admin Control</a>
                     <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility.html" class="dropdown-item">Clinic Facilities</a>
-                            <a href="team.html" class="dropdown-item">Our Veterinarians</a>
-                            <a href="call-to-action.html" class="dropdown-item">Join Our Team</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 m-0">
+                            <a href="facility.html" class="dropdown-item">School Facilities</a>
+                            <a href="team.html" class="dropdown-item">Popular Teachers</a>
+                            <a href="call-to-action.html" class="dropdown-item">Become A Teachers</a>
                             <a href="appointment.html" class="dropdown-item">Make Appointment</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                             <a href="404.html" class="dropdown-item">404 Error</a>
                         </div>
                     </div> -->
-                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                    <a href="contact.html" class="nav-item nav-link active">Contact Us</a>
                 </div>
+                <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a>
             </div>
         </nav>
         <!-- Navbar End -->
@@ -79,91 +79,41 @@
         <!-- Page Header End -->
         <div class="container-xxl py-5 page-header position-relative mb-5">
             <div class="container py-5">
-                <h1 class="display-2 text-white animated slideInDown mb-4">About Us</h1>
+                <h1 class="display-2 text-white animated slideInDown mb-4">ADMIN CONTROL</h1>
                 <nav aria-label="breadcrumb animated slideInDown">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page">About Us</li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Admin control</li>
                     </ol>
                 </nav>
             </div>
         </div>
         <!-- Page Header End -->
 
-
-        <!-- About Start -->
         <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="mb-4">Learn More About Our Work And Our Services</h1>
-                        <p>At ADAMS, we are dedicated to providing the highest quality veterinary care for your pets. Our team of experienced veterinarians and staff are passionate about animal health and well-being.</p>
-                        <p class="mb-4">We offer a wide range of services, from routine checkups to advanced surgical procedures, ensuring your pets receive the best care possible. Our state-of-the-art facilities and compassionate approach make us the trusted choice for pet owners.</p>
-                        <div class="row g-4 align-items-center">
-                            <div class="col-sm-6">
-                                <a class="btn btn-primary rounded-pill py-3 px-5" href="">Read More</a>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle flex-shrink-0" src="img/lokkit.jpg" alt="" style="width: 45px; height: 45px;">
-                                    <div class="ms-3">
-                                        <h6 class="text-primary mb-1">Dr.Lokkit</h6>
-                                        <small>Founder & Veterinarian</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <img class="img-fluid w-75 rounded-circle bg-light p-3" src="img/about-1.jpg" alt="">
-                            </div>
-                            <div class="col-6 text-start" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/about-2.jpg" alt="">
-                            </div>
-                            <div class="col-6 text-end" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/about-3.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
+          <div class="container">
+              <div class="bg-light rounded">
+                  <div class="row g-0">
+                      <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                          <div class="h-100 d-flex flex-column justify-content-center p-5">
+                              <h1 class="mb-4">Admin Control</h1>
+                              <div>
+                                  <a href="#" onclick="redirectToLogin('medicine.html')" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">Medicine Vault</a>
+                                  <a href="#" onclick="redirectToLogin('client.html')" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">Client Data</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                          <div class="position-relative h-100">
+                              <img class="position-absolute w-100 h-100 rounded" src="img/all.jpg" style="object-fit: cover;">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
 
-
-
-       
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h1 class="mb-3">Our Veterinarian</h1>
-                <p>Dr. Lokkit is a skilled veterinarian known for his expertise in animal care and dedication to pet health. He is also the founder of Vet Pet Store, providing top-quality products and services for pet owners.</p>
-            </div>
-            <div class="row g-4">
-                
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item position-relative">
-                        <img class="img-fluid rounded-circle w-75" src="img/lokkit.jpg" alt="" style="margin-left: 100%;">
-                        <div class="team-text">
-                            <h3>Dr.Lokkit Chaudhary</h3>
-                            <p>Veterinarian</p>
-                            <div class="d-flex align-items-center">
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
@@ -173,25 +123,37 @@
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>C-17, main road masoodpur, vasant kunj, new delhi, India</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9116603111</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>lokkit@gmail.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+                        
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Quick Links</h3>
-                        <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
-                        <a class="btn btn-link text-white-50" href="services.html">Our Services</a>
-                        <a class="btn btn-link text-white-50" href="underWork.html">Privacy Policy</a>
-                        <a class="btn btn-link text-white-50" href="underWork.html">Terms & Condition</a>
+                    <section data-aos="fade-up" data-aos-duration="1000">
+                        <h2 class="text-cyan-300 text-xl mb-4">Contact Me</h2>
+                        <form action="https://formspree.io/f/your_form_id" method="POST" class="text-start bg-dark p-4 rounded shadow-lg">
+                          <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required />
+                          </div>
+                          <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" name="email" required />
+                          </div>
+                          <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-outline-info">Send</button>
+                        </form>
+                      </section>
+                      <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Photo Gallery</h3>
                         <div class="row g-2 pt-2">
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-1.jpg" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="img/DOG-CAT.jpeg" alt="">
                             </div>
                             <div class="col-4">
                                 <img class="img-fluid rounded bg-light p-1" src="img/classes-2.jpg" alt="">
@@ -210,14 +172,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Newsletter</h3>
-                        <p>Subscribe to our newsletter for the latest updates on pet care and clinic services.</p>
-                        <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             <div class="container">
@@ -243,7 +198,6 @@
         </div>
         <!-- Footer End -->
 
-
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
@@ -260,4 +214,4 @@
     <script src="js/main.js"></script>
 </body>
 
-</html> 
+</html>

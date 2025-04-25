@@ -7,8 +7,9 @@ dist/
 build/
 
 # Python-related (if applicable)
-__pycache__/
+_pycache_/
 *.pyc
 
 # System files
 .DS_Store
+.
