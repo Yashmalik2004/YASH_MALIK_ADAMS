@@ -45,7 +45,7 @@
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
             <a href="index.html" class="navbar-brand">
-                <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>Kider</h1>
+                <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>Appointment</h1>
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -54,21 +54,16 @@
                 <div class="navbar-nav mx-auto">
                     <a href="index.html" class="nav-item nav-link">Home</a>
                     <a href="about.html" class="nav-item nav-link">About Us</a>
-                    <a href="classes.html" class="nav-item nav-link">Classes</a>
-                    <!-- <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility.html" class="dropdown-item">School Facilities</a>
-                            <a href="team.html" class="dropdown-item">Popular Teachers</a>
-                            <a href="call-to-action.html" class="dropdown-item">Become A Teachers</a>
-                            <a href="appointment.html" class="dropdown-item active">Make Appointment</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Error</a>
-                        </div>
-                    </div> -->
+                    <a href="services.html" class="nav-item nav-link active">Services</a>
+                    <a href="admin-control.html" class="nav-item nav-link">Admin Control</a>
                     <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                 </div>
-                <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a>
+                <button onclick="window.location.href='login.html'" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">
+                    Sign in <i class="fa fa-arrow-right ms-3"></i>
+                </button>
+                
+                
+                
             </div>
         </nav>
         <!-- Navbar End -->
@@ -88,66 +83,101 @@
             </div>
         </div>
         <!-- Page Header End -->
-
-
-        <!-- Appointment Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="bg-light rounded">
-                    <div class="row g-0">
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                            <div class="h-100 d-flex flex-column justify-content-center p-5">
-                                <h1 class="mb-4">Make Appointment</h1>
-                                <form>
-                                    <div class="row g-3">
-                                        <div class="col-sm-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="gname" placeholder="Gurdian Name">
-                                                <label for="gname">Gurdian Name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-floating">
-                                                <input type="email" class="form-control border-0" id="gmail" placeholder="Gurdian Email">
-                                                <label for="gmail">Gurdian Email</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="cname" placeholder="Child Name">
-                                                <label for="cname">Child Name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="cage" placeholder="Child Age">
-                                                <label for="cage">Child Age</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                                <label for="message">Message</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
-                                        </div>
+<!-- Appointment Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="bg-light rounded">
+            <div class="row g-0">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="h-100 d-flex flex-column justify-content-center p-5">
+                        <h1 class="mb-4">Make Appointment</h1>
+                        <form id="appointment-form"  action="/submit-appointment" method="POST">
+                            <div class="row g-3">
+                                <!-- Client Name (Required) -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="clientName" placeholder="Client Name" name="clientName" required>
+                                        <label for="clientName">Client Name *</label>
                                     </div>
-                                </form>
+                                </div>
+                                
+                                <!-- Pet Name (Required) -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="petName" placeholder="Pet Name" name="petName" required>
+                                        <label for="petName">Pet Name *</label>
+                                    </div>
+                                </div>
+                                
+                                <!-- Pet Type (Optional) -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="petType" placeholder="Pet Type" name="petType">
+                                        <label for="petType">Pet Type</label>
+                                    </div>
+                                </div>
+                                
+                                <!-- Medical History (Optional) -->
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control border-0" id="medicalHistory" placeholder="Medical History" name="medicalHistory" style="height: 100px"></textarea>
+                                        <label for="medicalHistory">Medical History</label>
+                                    </div>
+                                </div>
+
+                                <!-- Height (Optional) -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control border-0" id="height" placeholder="Height" name="height">
+                                        <label for="height">Pet Height (cm)</label>
+                                    </div>
+                                </div>
+
+                                <!-- Weight (Optional) -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control border-0" id="weight" placeholder="Weight" name="weight">
+                                        <label for="weight">Pet Weight (kg)</label>
+                                    </div>
+                                </div>
+
+                                <!-- Last Appointment Date (Optional) -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control border-0" id="lastAppointment" name="lastAppointment">
+                                        <label for="lastAppointment">Last Appointment Date</label>
+                                    </div>
+                                </div>
+
+                                <!-- Upcoming Appointment Date (Optional) -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control border-0" id="upcomingAppointment" name="upcomingAppointment">
+                                        <label for="upcomingAppointment">Upcoming Appointment Date</label>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                                </div>
+
                             </div>
-                        </div>
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
-                            <div class="position-relative h-100">
-                                <img class="position-absolute w-100 h-100 rounded" src="img/appointment.jpg" style="object-fit: cover;">
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
+
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="img/appointment.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+
             </div>
         </div>
-        <!-- Appointment End -->
-
+    </div>
+</div>
+<!-- Appointment End -->
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -244,6 +274,44 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        document.getElementById('appointment-form').addEventListener('submit', async function (e) {
+            e.preventDefault(); // stop form from submitting normally
+        
+            const formData = {
+                clientName: document.getElementById('clientName').value,
+                petName: document.getElementById('petName').value,
+                petType: document.getElementById('petType').value,
+                medicalHistory: document.getElementById('medicalHistory').value,
+                height: document.getElementById('height').value,
+                weight: document.getElementById('weight').value,
+                lastAppointment: document.getElementById('lastAppointment').value,
+                upcomingAppointment: document.getElementById('upcomingAppointment').value
+            };
+        
+            try {
+                const response = await fetch('http://localhost:5501/submit-appointment', {  // <-- your server API endpoint
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+        
+                if (response.ok) {
+                    alert('Appointment submitted successfully!');
+                    document.getElementById('appointment-form').reset();
+                } else {
+                    alert('Error submitting the form.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error submitting the form.');
+            }
+        });
+        </script>
+        
+    
 </body>
 
 </html>
