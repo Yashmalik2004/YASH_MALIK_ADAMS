@@ -3,32 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADAMS - Login </title>
+    <title>ADAMS - Login</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #f4f4f4;
-        }
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-        }
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
         }
         button {
             padding: 10px 20px;
@@ -36,54 +16,31 @@
             color: white;
             border: none;
             cursor: pointer;
-            margin-top: 20px;
             font-size: 16px;
             border-radius: 5px;
+            margin-top: 20px;
         }
         button:hover {
             background: #357ae8;
         }
     </style>
+    <!-- Google Identity Services -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
 
-    <h2>Welcome to My Website</h2>
-    <p>Click the button below to sign in</p>
-
-    <!-- Sign In Button -->
-    <button onclick="openPopup()">Sign In with Google</button>
-
-    <!-- Login Popup -->
-    <div class="overlay" id="overlay" onclick="closePopup()"></div>
-    <div class="popup" id="loginPopup">
-        <h3>Sign in to Continue</h3>
-        <div id="g_id_onload"
-            data-client_id="945491419913-s43p9s98n14akj423b4b4jnc35f7c8nl.apps.googleusercontent.com"
-            data-context="signin"
-            data-ux_mode="popup"
-            data-callback="handleCredentialResponse"
-            data-auto_prompt="false">
-        </div>
-        <div class="g_id_signin" data-type="standard"></div>
-        <button onclick="closePopup()">Cancel</button>
-    </div>
+    <h2>Welcome to ADAMS</h2>
+    <button onclick="loginWithGoogle()">Login with Google</button>
 
     <script>
-        function openPopup() {
-            document.getElementById("overlay").style.display = "block";
-            document.getElementById("loginPopup").style.display = "block";
-        }
+        function loginWithGoogle() {
+            const clientId = '1092239645000-b77os56g6tmc31h6btcnqbti4h86g0ea.apps.googleusercontent.com';
+            const redirectUri = 'https://github.com/Yashmalik2004/Yash_malik_CSE1_ADAMS';  // 🛠️ YOUR REDIRECT URL
+            const scope = 'email profile';
+            const responseType = 'token';
 
-        function closePopup() {
-            document.getElementById("overlay").style.display = "none";
-            document.getElementById("loginPopup").style.display = "none";
-        }
-
-        function handleCredentialResponse(response) {
-            console.log("Google Response:", response);
-            alert("Login Successful!");
-            closePopup();
+            const url = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=${responseType}&scope=${scope}`;
+            window.location.href = url;
         }
     </script>
 
