@@ -217,13 +217,13 @@ The following features are planned for future versions of the ADAMS system:
 
 For any queries or collaborations, reach out to:  
 📧  **yashmalik4832004two@gmail.com**
-or **9971806132**
+or **+91 9971806132**
 
-**For Vet clinic or Treatment Or For contacting Industry mentor Dr.Lokkit Choudhary**
-  contact email: **lokkitkumar@gmail.com**
-  contact no.: **+91 9116603111**
+**For Vet clinic & Treatment Or For contacting Industry mentor Dr.Lokkit Choudhary,**
+**Reach out to:**
+  **lokkitkumar@gmail.com** or 
+  **+91 9116603111**
   
- 
 ---
 
 # 🐾 **Thank you for visiting ADAMS!**
