@@ -5,7 +5,7 @@
 ---
 ## 📄 Project Documentation
 
-[Click here to view the Project Report (PDF)](https://github.com/Yashmalik2004/Yash_malik_CSE1_ADAMS/blob/main/final.pdf)
+[Click here to view the Project Report (PDF)](https://github.com/Yashmalik2004/Yash_malik_CSE1_ADAMS/blob/main/ADAMS.pdf)
 
 ---
 ## 🎥 Project Video
