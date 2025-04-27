@@ -21,7 +21,7 @@ By integrating these functionalities, ADAMS ensures seamless workflow, reduces a
 
 Here’s a glimpse of the ADAMS web dashboard interface:
 
-![Alt Text](https://github.com/Yashmalik2004/repository-name/blob/main/path/to/image.jpg?raw=true)
+![Alt Text](https://github.com/Yashmalik2004/Yash_malik_CSE1_ADAMS/blob/main/Screenshot%202025-04-27%20220041.png)
 
 
 ---
@@ -89,6 +89,9 @@ The following features are planned for future versions of the ADAMS system:
 - Evaluation tools: Postman, Browser Developer Tools, Lighthouse.
 - Initial deployment planned for local hosting with future migration to cloud.
 
+![Image Alt Text](https://github.com/Yashmalik2004/Yash_malik_CSE1_ADAMS/blob/main/Screenshot%202025-04-27%20220137.png)
+
+
 ---
 
 ## 📝 **Results**
@@ -111,15 +114,24 @@ The following features are planned for future versions of the ADAMS system:
 
 ## 🌐 **Live Project**
 
-👉 [View our project site here!](https://lavyakumar.github.io/Lavya-CSE1-ADAMS/)
+👉 [View our project site here!](https://yashmalik2004.github.io/Yash_malik_CSE1_ADAMS/)
 
 ---
+## Steps to Run/Execute the Project
+1. Clone or download the repository.
+2. Open `index.html` in any code compiler and live run it.
+3. Enter the directory of the project 'adams' and run 'node server.js' command in any terminal to activate the backend.
+4. Enter the city name to get the weather update.
+![Image Alt Text](https://github.com/Yashmalik2004/Yash_malik_CSE1_ADAMS/blob/main/image.png)   
+
+---
+![Image Alt Text](https://github.com/username/repository-name/raw/main/image.jpg)
 
 ## 🤝 **Team Credits**
 
 - **Industry Mentor:** Dr. Lokkit Chaudhary
 - **Faculty Mentor:** Dr. Saneh Lata Yadav
-- **Developers:** Lavya Kumar and Team
+- **Developers:** Yash malik | Sneha Sharma | Ashmita | lavya
 
 ---
 
@@ -127,6 +139,7 @@ The following features are planned for future versions of the ADAMS system:
 
 For any queries or collaborations, reach out to:  
 📧 **lokkit@gmail.com** 
+or **yashmalik4832004two@gmail.com**
 
 ---
 
