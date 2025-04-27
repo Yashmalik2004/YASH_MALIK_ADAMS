@@ -141,7 +141,7 @@ The following features are planned for future versions of the ADAMS system:
 
 - **Industry Mentor:** Dr. Lokkit Chaudhary
 - **Faculty Mentor:** Dr. Saneh Lata Yadav
-- **Developers:** Yash malik | Sneha Sharma | Ashmita | lavya
+- **Developers:** Yash malik | Sneha Sharma | Ashmita | Lavya Kumar Beriwal
 
 ---
 
@@ -149,7 +149,7 @@ The following features are planned for future versions of the ADAMS system:
 
 For any queries or collaborations, reach out to:  
 📧 **lokkit@gmail.com** 
-or **yashmalik4832004two@gmail.com**
+or **+91 9116603111**
 
 ---
 
