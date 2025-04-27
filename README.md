@@ -216,11 +216,13 @@ The following features are planned for future versions of the ADAMS system:
 ## 📬 **Contact**
 
 For any queries or collaborations, reach out to:  
-📧 **lokkit@gmail.com** 
-or **9116603111**
+📧  **yashmalik4832004two@gmail.com**
+or **9971806132**
 
-**For Project details**
-  contact  **yashmalik4832004two@gmail.com**
+**For Vet clinic or Treatment Or For contacting Industry mentor Dr.Lokkit Choudhary**
+  contact email: **lokkitkumar@gmail.com**
+  contact no.: **+91 9116603111**
+  
  
 ---
 
