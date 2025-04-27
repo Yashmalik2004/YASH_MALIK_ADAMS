@@ -242,9 +242,12 @@ app.post('/send-mail', (req, res) => {
 
 // Submit Appointment
 app.post("/submit-appointment", (req, res) => {
+    console.log(req.body);  // Log the incoming data for debugging
+
     const { clientName, petName, petType, medicalHistory, height, weight, lastAppointment, upcomingAppointment } = req.body;
 
     if (!clientName || !petName || !petType || !medicalHistory || !height || !weight || !lastAppointment || !upcomingAppointment) {
+        console.log('Missing required fields');
         return res.status(400).json({ message: "All fields are required" });
     }
 
@@ -261,6 +264,7 @@ app.post("/submit-appointment", (req, res) => {
             console.error("Error inserting data:", err);
             return res.status(500).json({ message: "Error saving appointment" });
         }
+        console.log("Appointment saved successfully!");
         res.status(200).json({ message: "Appointment saved successfully!" });
     });
 });
@@ -322,6 +326,67 @@ app.delete("/delete-medicine/:id", (req, res) => {
 });
 // ----------------- CRON JOB -----------------
 
+// Alert skip krne vala cron job code block.
+// let lastAlertDate = undefined;
+
+// cron.schedule('* * * * *', () => {
+//     console.log("🔁 Running daily alert check");
+
+//     // Get today's date in YYYY-MM-DD format
+//     const today = moment().format('YYYY-MM-DD');
+
+//     // Check if an alert has already been sent today
+//     if (lastAlertDate === today) {
+//         console.log("✅ Alert already sent today. Skipping.");
+//         return;
+//     }
+
+//     axios.get('http://localhost:3000/check-alerts')
+//         .then(response => {
+//             const { upcomingAppointments, medicineAlerts } = response.data;
+
+//             if (upcomingAppointments.length === 0 && medicineAlerts.length === 0) {
+//                 console.log("✅ No alerts for today.");
+//                 return;
+//             }
+
+//             let messageBody = "";
+
+//             if (upcomingAppointments.length > 0) {
+//                 messageBody += "📅 *Upcoming Appointments:*\n";
+//                 upcomingAppointments.forEach(a => {
+//                     messageBody += `• ${a.client_name} – ${a.pet_name} on ${moment(a.upcoming_appointment).format("DD MMM YYYY")}\n`;
+//                 });
+//                 messageBody += "\n";
+//             }
+
+//             if (medicineAlerts.length > 0) {
+//                 messageBody += "💊 *Low Stock Medicines:*\n";
+//                 medicineAlerts.forEach(m => {
+//                     messageBody += `• ${m.medicine_name} (for ${m.disease}) – Only ${m.quantity} left\n`;
+//                 });
+//             }
+
+//             const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+
+//             client.messages.create({
+//                 from: process.env.TWILIO_WHATSAPP_FROM,
+//                 to: process.env.TWILIO_WHATSAPP_TO,
+//                 body: messageBody
+//             })
+//             .then(message => {
+//                 console.log("📤 WhatsApp alert sent:", message.sid);
+//                 // Update the last alert date to today
+//                 lastAlertDate = today;
+//             })
+//             .catch(err => console.error("❌ Error sending WhatsApp:", err));
+//         })
+//         .catch(err => {
+//             console.error("Error during scheduled alert check:", err.message);
+//         });
+// });
+
+// har vakt alert bhejne wala cron job code block.
 // CRON JOB - Runs every day at 8 AM (fixed cron timing), but for testing purposes, it runs every minute
 cron.schedule('* * * * *', () => {
     console.log("🔁 Running daily alert check");
