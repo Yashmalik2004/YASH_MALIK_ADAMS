@@ -149,8 +149,11 @@ The following features are planned for future versions of the ADAMS system:
 
 For any queries or collaborations, reach out to:  
 📧 **lokkit@gmail.com** 
-or **yashmalik4832004two@gmail.com**
+or **911660311**
 
+**For Project based enquery**
+ member = **yashmalik4832004two@gmail.com**
+ 
 ---
 
 # 🐾 **Thank you for visiting ADAMS!**
