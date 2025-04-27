@@ -58,13 +58,33 @@ Here’s a glimpse of the ADAMS web dashboard interface:
 
 ---
 
-## 🛠️ **Technology Stack**
+## 🛠️ Technology Stack
 
-- **C++** — Core system development logic and functionality.
-- **MySQL** — Relational database management for storing animal and medication records.
-- **HTML, CSS, JavaScript** — Frontend web dashboard for interaction with users.
-- **SMTP Library in C++** — Automated email notifications for medication expiry and low stock alerts.
-- **Object-Oriented Programming (OOP)** — Modular and scalable codebase for easy maintenance and updates.
+- **Frontend**: 
+  - **HTML** — Structure and layout of the web dashboard.
+  - **CSS** — Styling and visual presentation of the web dashboard.
+  - **JavaScript** — Interactive elements and client-side scripting for a dynamic user experience.
+  
+- **Backend**:
+  - **Node.js** — Server-side logic and handling requests for the application.
+  - **MySQL** — Relational database for storing animal medical records and medication inventory.
+  
+- **APIs**:
+  - **Twilio API** — Sending SMS notifications for stock alerts, appointment reminders, and medication expiration notifications.
+  - **SMTP** — Sending automated email notifications for medication expiry and low stock alerts.
+  
+- **Scheduling & Automation**:
+  - **Cron Jobs** — Scheduling tasks like sending reminder emails and checking medication expiry dates.
+  
+- **Programming Concepts**:
+  - **Object-Oriented Programming (OOP)** — A modular and scalable code structure for easy maintenance and future enhancements.
+  
+- **Version Control**:
+  - **Git** — Source code management for version control and collaboration.
+
+- **Security**:
+  - **HTTPS** — Secure data transmission between the client and the server.
+
 
 ---
 
@@ -92,12 +112,44 @@ The following features are planned for future versions of the ADAMS system:
 
 ---
 
-## 🧪 **Experimental Setup**
+## 🧪 Experimental Setup
 
-- Developed using C++, MySQL, and Web Technologies.
-- Tested across multiple devices (Desktop/Tablet) and browsers (Chrome, Firefox, Edge).
-- Evaluation tools: Postman, Browser Developer Tools, Lighthouse.
-- Initial deployment planned for local hosting with future migration to cloud.
+**Developed using:**
+
+- **Frontend**: HTML, CSS, JavaScript (for web dashboard)
+- **Backend**: Node.js (for handling backend logic)
+- **Database**: MySQL (for storing animal and medication records)
+- **APIs**: Twilio API (for sending SMS notifications), SMTP (for email alerts)
+- **Scheduling**: Cron Jobs (for automated tasks like sending reminder emails and updating stock alerts)
+- **Version Control**: Git (for source code versioning)
+
+**Tested across:**
+
+- Desktop, Tablet, and Mobile Devices
+- Browsers: Chrome, Firefox, Edge
+
+**Evaluation Tools:**
+
+- **Postman** (for API testing)
+- **Browser Developer Tools** (for debugging and performance optimization)
+- **Lighthouse** (for performance and accessibility audits)
+- **Jest** (for unit and integration testing in JavaScript)
+
+**Deployment:**
+
+- **Initial Deployment**: Local hosting (for initial testing and feedback)
+- **Future Migration**: Planned cloud migration to AWS or Azure for better scalability and reliability
+
+**Security and Backup Tools:**
+
+- **Backup**: MySQL dump for periodic database backups
+- **Security**: HTTPS for secure data transfer, Basic Authentication (for admin access)
+
+**User Interaction:**
+
+- **Twilio API** for SMS-based alerts and notifications to users regarding stock levels, appointments, and medication expirations
+- **Cron Jobs** for scheduling routine tasks such as sending automated reminders for upcoming appointments and medication expiry dates
+
 
 ![Image Alt Text](https://github.com/Yashmalik2004/Yash_malik_CSE1_ADAMS/blob/main/Screenshot%202025-04-27%20220137.png)
 
