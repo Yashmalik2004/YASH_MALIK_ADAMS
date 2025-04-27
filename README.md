@@ -4,7 +4,7 @@
 
 ---
 ## 📄 Project Documentation
-[Click here to view our project PDF](https://github.com/Yashmalik2004/Yash_malik_CSE1_ADAMS/blob/main/adams.pdf)
+[Click here to view our project PDF](https://github.com/Yashmalik2004/Yash_malik_CSE1_ADAMS/main/adams.pdf)
 
 
 
