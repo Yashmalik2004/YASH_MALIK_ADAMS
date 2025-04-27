@@ -132,7 +132,7 @@ The following features are planned for future versions of the ADAMS system:
 2. Open `index.html` in any code compiler and live run it.
 3. Enter the directory of the project 'adams' and run 'node server.js' command in any terminal to activate the backend.
 4. Enter the city name to get the weather update.
-![Image Alt Text](https://github.com/Yashmalik2004/Yash_malik_CSE1_ADAMS/blob/main/image.png)   
+![Image Alt Text](https://github.com/Yashmalik2004/Yash_malik_CSE1_ADAMS/blob/main/WhatsApp%20Image%202025-04-27%20at%2022.14.20_1580d958.jpg)   
 
 ---
 ![Image Alt Text](https://github.com/username/repository-name/raw/main/image.jpg)
