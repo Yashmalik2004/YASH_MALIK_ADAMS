@@ -14,6 +14,10 @@
 [Click here to view the Project Video](https://1drv.ms/v/c/1b29cb5322b45e96/EbfAsX5nfwBHiZJG7sSP2IEBRGOnfcP2vnzVNkbAhrxfpg?e=QFvLJp)
 
 ---
+## 🌐 **Live Project**
+
+👉 [View our project site here!](https://yashmalik2004.github.io/Yash_malik_CSE1_ADAMS/)
+---
 
 ## 📚 **Project Overview**
 
@@ -172,12 +176,6 @@ The following features are planned for future versions of the ADAMS system:
 - Triet, M. N., et al. (2024). Enhanced Security for Animal Health Records Using RSA-Encrypted NFTs. *Lecture Notes in Computer Science*.
 - Molloy, T. (2023). Recent Technological Advancements in Veterinary Medicine. *VETport*.
 - Brown, A. (2025). 8 Veterinary Technology Trends. *Harvard*.
-
----
-
-## 🌐 **Live Project**
-
-👉 [View our project site here!](https://yashmalik2004.github.io/Yash_malik_CSE1_ADAMS/)
 
 ---
 
