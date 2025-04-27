@@ -151,8 +151,8 @@ For any queries or collaborations, reach out to:
 📧 **lokkit@gmail.com** 
 or **911660311**
 
-**For Project based enquery**
- member = **yashmalik4832004two@gmail.com**
+**For Project details**
+  contact  **yashmalik4832004two@gmail.com**
  
 ---
 
