@@ -179,13 +179,28 @@ The following features are planned for future versions of the ADAMS system:
 👉 [View our project site here!](https://yashmalik2004.github.io/Yash_malik_CSE1_ADAMS/)
 
 ---
-## Steps to Run/Execute the Project
-1. Clone or download the repository.
-2. Open `index.html` in any code compiler and live run it.
-3. Enter the directory of the project 'adams' and run 'node server.js' command in any terminal to activate the backend.
-4. Enter the city name to get the weather update.
-![Image Alt Text](https://github.com/Yashmalik2004/Yash_malik_CSE1_ADAMS/blob/main/WhatsApp%20Image%202025-04-27%20at%2022.14.20_1580d958.jpg)   
 
+## 🚀 Steps to Run/Execute the Project Locally
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Yashmalik2004/Yash_malik_CSE1_ADAMS.git
+2. **Navigate to the project directory**
+   ```bash
+   cd Yash_malik_CSE1_ADAMS
+3. **Install the required dependencies**
+    ```bash
+    npm install
+    npm init -y
+    npm install express sqlite3 body-parser cors
+ 4. **Set up the database**
+    - Create a MySQL database for the project (e.g., adams_db).
+    - Update the database connection credentials in the .env file with your local MySQL database configuration.
+ 5. **Run the development server**
+    ```bash
+    node server.js
+6. **Access the Application**
+    a. Open `index.html` in any code compiler and live run it.
 ---
 ![Image Alt Text](https://github.com/username/repository-name/raw/main/image.jpg)
 
