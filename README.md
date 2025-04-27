@@ -141,7 +141,7 @@ The following features are planned for future versions of the ADAMS system:
 
 - **Industry Mentor:** Dr. Lokkit Chaudhary
 - **Faculty Mentor:** Dr. Saneh Lata Yadav
-- **Developers:** Yash malik | Sneha Sharma | Ashmita | lavya
+- **Developers:** Yash malik | Sneha Sharma | Ashmita | lavya kumar beriwal
 
 ---
 
