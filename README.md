@@ -3,6 +3,16 @@
 > **A comprehensive solution for veterinary medication management and animal healthcare records, designed to enhance clinic operations and ensure the health and safety of pets.**
 
 ---
+## 📄 Project Documentation
+
+[Click here to view the Project Report (PDF)](https://github.com/Yashmalik2004/Yash_malik_CSE1_ADAMS/blob/main/final.pdf)
+
+---
+## 🎥 Project Video
+
+[Click here to view the Project Video](https://1drv.ms/v/c/1b29cb5322b45e96/EbfAsX5nfwBHiZJG7sSP2IEBRGOnfcP2vnzVNkbAhrxfpg?e=QFvLJp)
+
+---
 
 ## 📚 **Project Overview**
 
