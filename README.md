@@ -15,7 +15,7 @@
 ---
 ## 🎥 Project Video
 
-[Click here to view the Project Video](https://1drv.ms/v/c/1b29cb5322b45e96/EbfAsX5nfwBHiZJG7sSP2IEBRGOnfcP2vnzVNkbAhrxfpg?e=QFvLJp)
+[Click here to view the Project Video](https://krmangalameduin-my.sharepoint.com/personal/vandna_batra_krmangalam_edu_in/_layouts/15/stream.aspx?id=%2Fpersonal%2Fvandna%5Fbatra%5Fkrmangalam%5Fedu%5Fin%2FDocuments%2FProject%28Certificates%20from%20Industry%29%2FBtechcse%2DA%5FYashmalik%282301010006%29%2CSnehasharma%282301010010%29%2CLavya%5Fkumar%5Fberiwal%282301010012%29%2CAshmita%282301010008%29%2Fkm%5F20250428%2D1%5F1080p%5F60f%5F20250428%5F131146%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E6851326f%2D6c62%2D4305%2D8696%2Df0ef8f0a50c6)
 
 ---
 ## 🌐 **Live Project**
