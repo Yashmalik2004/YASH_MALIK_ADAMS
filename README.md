@@ -4,7 +4,7 @@
 
 ---
 ## 📄 Project Documentation
-[Click here to view our project PDF](https://github.com/Yashmalik2004/Yash_malik_CSE1_ADAMS/blob/main/adams.pdf)
+[Click here to view our project PDF]([https://github.com/Yashmalik2004/Yash_malik_CSE1_ADAMS/blob/main/adams.pdf](https://krmangalameduin-my.sharepoint.com/personal/vandna_batra_krmangalam_edu_in/_layouts/15/onedrive.aspx?ga=1&id=%2Fpersonal%2Fvandna%5Fbatra%5Fkrmangalam%5Fedu%5Fin%2FDocuments%2FProject%28Certificates%20from%20Industry%29%2FBtechcse%2DA%5FYashmalik%282301010006%29%2CSnehasharma%282301010010%29%2CLavya%5Fkumar%5Fberiwal%282301010012%29%2CAshmita%282301010008%29%2Fadams%2Epdf&parent=%2Fpersonal%2Fvandna%5Fbatra%5Fkrmangalam%5Fedu%5Fin%2FDocuments%2FProject%28Certificates%20from%20Industry%29%2FBtechcse%2DA%5FYashmalik%282301010006%29%2CSnehasharma%282301010010%29%2CLavya%5Fkumar%5Fberiwal%282301010012%29%2CAshmita%282301010008%29))
 
 ---
 ## 📄 Deployment Certificate
