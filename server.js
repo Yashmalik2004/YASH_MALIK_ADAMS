@@ -17,11 +17,10 @@ app.use(express.json());
 app.use(cors());
 
 const db = mysql.createConnection({
-  host: process.env.MYSQLHOST,
-  user: process.env.MYSQLUSER,
-  password: process.env.MYSQLPASSWORD,
-  database: process.env.MYSQLDATABASE,
-  port: process.env.MYSQLPORT || 3306,
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
 });
 
 db.connect((err) => {
@@ -30,7 +29,19 @@ db.connect((err) => {
     return;
   }
   console.log("🟢Connected db :)");
+
+  db.query(`
+    CREATE TABLE IF NOT EXISTS users (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      name VARCHAR(255),
+      email VARCHAR(255)
+    )
+  `, (err, results) => {
+    if (err) console.error('Error creating table:', err);
+    else console.log('✅ Users table created or already exists');
+  });
 });
+
 
 function convertExcelDate(serial) {
   if (!serial) return null;
@@ -251,7 +262,7 @@ app.get("/check-alerts", (req, res) => {
     if (medicalIssues.length === 0) {
       return res.json({ upcomingAppointments: [], medicineAlerts: [] });
     }
-    console.log("Medical Issues:", medicalIssues);
+    // console.log("Medical Issues:", medicalIssues);
 
     const placeholders = medicalIssues.map(() => "?").join(",");
     const medicineQuery = `
@@ -423,68 +434,6 @@ app.delete("/delete-medicine/:id", (req, res) => {
 });
 // ----------------- CRON JOB -----------------
 
-// Alert skip krne vala cron job code block.
-// let lastAlertDate = undefined;
-
-// cron.schedule('* * * * *', () => {
-//     console.log(" Running daily alert check");
-
-//     // Get today's date in YYYY-MM-DD format
-//     const today = moment().format('YYYY-MM-DD');
-
-//     // Check if an alert has already been sent today
-//     if (lastAlertDate === today) {
-//         console.log(" Alert already sent today. Skipping.");
-//         return;
-//     }
-
-//     axios.get('http://localhost:3000/check-alerts')
-//         .then(response => {
-//             const { upcomingAppointments, medicineAlerts } = response.data;
-
-//             if (upcomingAppointments.length === 0 && medicineAlerts.length === 0) {
-//                 console.log("No alerts for today.");
-//                 return;
-//             }
-
-//             let messageBody = "";
-
-//             if (upcomingAppointments.length > 0) {
-//                 messageBody += " *Upcoming Appointments:*\n";
-//                 upcomingAppointments.forEach(a => {
-//                     messageBody += `• ${a.client_name} – ${a.pet_name} on ${moment(a.upcoming_appointment).format("DD MMM YYYY")}\n`;
-//                 });
-//                 messageBody += "\n";
-//             }
-
-//             if (medicineAlerts.length > 0) {
-//                 messageBody += "*Low Stock Medicines:*\n";
-//                 medicineAlerts.forEach(m => {
-//                     messageBody += `• ${m.medicine_name} (for ${m.disease}) – Only ${m.quantity} left\n`;
-//                 });
-//             }
-
-//             const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
-
-//             client.messages.create({
-//                 from: process.env.TWILIO_WHATSAPP_FROM,
-//                 to: process.env.TWILIO_WHATSAPP_TO,
-//                 body: messageBody
-//             })
-//             .then(message => {
-//                 console.log("WhatsApp alert sent:", message.sid);
-//                 // Update the last alert date to today
-//                 lastAlertDate = today;
-//             })
-//             .catch(err => console.error("Error sending WhatsApp:", err));
-//         })
-//         .catch(err => {
-//             console.error("Error during scheduled alert check:", err.message);
-//         });
-// });
-
-// har vakt alert bhejne wala cron job code block.
-// CRON JOB - Runs every day at 8 AM (fixed cron timing), but for testing purposes, it runs every minute
 cron.schedule("* * * * *", () => {
   console.log(":) Running daily alert check");
 
