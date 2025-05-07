@@ -450,7 +450,7 @@ cron.schedule("* * * * *", () => {
       let messageBody = "";
 
       if (upcomingAppointments.length > 0) {
-        messageBody += " *Upcoming Appointments:*\n";
+        messageBody += " *📅Upcoming Appointments:*\n";
         upcomingAppointments.forEach((a) => {
           messageBody += `• ${a.client_name} – ${a.pet_name} on ${moment(
             a.upcoming_appointment
@@ -460,7 +460,7 @@ cron.schedule("* * * * *", () => {
       }
 
       if (medicineAlerts.length > 0) {
-        messageBody += " *Low Stock Medicines:*\n";
+        messageBody += " *⚠️Low Stock Medicines:*\n";
         medicineAlerts.forEach((m) => {
           messageBody += `• ${m.medicine_name} (for ${m.disease}) – Only ${m.quantity} left\n`;
         });
@@ -477,8 +477,8 @@ cron.schedule("* * * * *", () => {
           to: process.env.TWILIO_WHATSAPP_TO,
           body: messageBody,
         })
-        .then((message) => console.log("WhatsApp alert sent 🟢:", message.sid))
-        .catch((err) => console.error("Error sending WhatsApp 🔴:", err));
+        .then((message) => console.log("🟢WhatsApp alert sent:", message.sid))
+        .catch((err) => console.error("🔴Error sending WhatsApp:", err));
     })
     .catch((err) => {
       console.error("Error during scheduled alert check:", err.message);
@@ -486,5 +486,5 @@ cron.schedule("* * * * *", () => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running 🟢 on http://localhost:${PORT}`);
+  console.log(`🟢Server running on http://localhost:${PORT}`);
 });
